@@ -19,6 +19,33 @@ let comments = [
     }    
 ]
 
+// slide continue
+
+let comment = 0;
+
+let slidePrev = () => {
+    comment -= 1;
+    if(comment < 0) {
+        comment = comments.length - 1
+    }
+    console.log(comments[comment])
+}
+
+let slideNext = () => {
+    comment += 1;
+    if(comment > comments.length - 1) {
+        comment = 0
+    }
+    console.log(comments[comment]) 
+}
+
+
+let previousBtn = document.getElementById("btnPrevious");
+let nextBtn = document.getElementById("btnNext");
+
+previousBtn.addEventListener('click', slidePrev);
+nextBtn.addEventListener('click', slideNext);
+
 class Comment {
     constructor(fullName, job, comment, image) {
         this.fullName = fullName,
@@ -28,14 +55,15 @@ class Comment {
     }
 }
 
+// class for cards 
 let innerComment = document.getElementsByClassName('comment');
 let authorJob = document.querySelector('#author-job');  
 let authorFullName = document.querySelector('.author-full-name');
 
 
-document.addEventListener('onload', () => {    
-    authorJob.innerHtml = "un métier";
-})
+// document.addEventListener('onload', () => {    
+//     authorJob.innerHtml = "un métier";
+// })
 
 for(let item of comments) {
     let commentCard = new Comment(
@@ -53,34 +81,12 @@ function newCard() {
     carouselItem.setAttribute( "class", "carousel-item");
     document.querySelector(".carousel-inner").appendChild(carouselItem);
 
-    // let carouselContent = document.createElement("div");
-    // carouselContent.setAttribute("class", "carousel-item-content");
-    // carouselItem.appendChild(carouselContent);
-
+    /* creeate the childrens inside new carousel-item-content, from origin .carousel-item-content */
     let carouselItemContent = document.querySelector(".carousel-item-content");
-    // console.log(carouselItemContent.childNodes);
 
-    // let newChildrens = carouselItemContent.childNodes;      
-    // console.log(newChildrens);
     
-    // carouselItem.append(newChildrens);
-
     let newChildrens = carouselItemContent.cloneNode(true);
-    carouselItem.append(newChildrens);
-
-    // carouselItem.append()
-        
-    // carouselItem.appendChild(carouselContent);
-
-    
-    // const arrCarouselItem = [carouselItemParent]
-    
-
-    // let leftContent = document.createElement("div");
-    // let rightContent = document.createElement("div");
-    // leftContent.setAttribute("class", "left-content");
-    // rightContent.setAttribute("class", "right-content");
-    // carouselContent.append(leftContent, rightContent);
+    carouselItem.append(newChildrens);    
 }
 
 
@@ -93,4 +99,17 @@ function newCard() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+function newFunction() {
+    next();
+}
 
