@@ -10,25 +10,43 @@
 </head>
 <body>
     <main>
-        “ I’ve been interested in coding for a while but never taken the jump, until now. 
-        I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-        excited about the future. ”
-
-        Tanya Sinclair
-        UX Engineer
-
-        “ If you want to lay the best foundation possible I’d recommend taking this course. 
-        The depth the instructors go into is incredible. I now feel so confident about 
-        starting up as a professional developer. ”
-
-        John Tarkpor
-        Junior Front-end Developer
-    </main>
-    <footer>
-        <div class="attribution">    
-            Coded by <a href="#">Lhamidou</a>.
+        <div class="wrap-content">
+            <div class="container-buttons">
+                <button class="carousel-control-prev button" id="btnPrevious" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span>Previous</span>
+                </button>
+                <button class="carousel-control-next button" id="btnNext" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span>Next</span>
+                </button>
+            </div>
+            <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-item-content">
+                            <div class="left-content">
+                                <div class="richText">
+                                    <p class="comment text" id="comment">I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. </p>
+                                    <div class="author-content">
+                                        <p class="author-fullname">Tanya Sinclair</p>
+                                        <p class="author-job" id="author-job"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-content" id="right-content">
+                                <img src="images/image-tanya.jpg"  alt="...">                            
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                </div>                
+            </div>
         </div>
-    </footer>
+    </main> 
+    <div class="attribution">    
+        Coded by <a href="#">Lhamidou</a>.
+    </div>    
 </body>
 <script src="script.js"></script>
 </html>
