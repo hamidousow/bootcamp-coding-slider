@@ -31,11 +31,6 @@ main {
     position: relative;
 }
 
-#carouselFade {
-    width: 100%;
-    border: 1px solid grey;
-}
-
 .left-content {
     display: flex;
     flex-direction: column;
@@ -64,12 +59,18 @@ main {
 }
 
 .carousel {
+    max-width: 850px;
+    padding: 3em 2em;
+    overflow: hidden;
 
     .carousel-inner {
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
-        width: 100%;
-        overflow: hidden;
+        width: auto;       
+    }
+
+    .carousel-item {
+        width: 800px;
     }
     
     .carousel-item-content {
@@ -93,7 +94,8 @@ main {
         width: 50%;
         padding: 1em; 
         background: #ffffff;
-        border: transparent;           
+        border: transparent;  
+        cursor: pointer;         
     }
 
     .carousel-control-prev {
