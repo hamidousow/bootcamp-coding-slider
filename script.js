@@ -2,24 +2,24 @@ let comments = [
     {
         fullName: "Hamidou SOW",
         job: "Junior Fron-end Developer",
-        profilPicture: "./src",
-        comment: " I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. "
+        imageSrc: "images/image-john.jpg",
+        comment: " Comment from Hamidou "
     },
     {
         fullName: "Tanya Sinclair",
         job: "UX Engineer",
-        profilPicture: "./src",
+        imageSrc: "images/image-tanya.jpg",
         comment: " I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. "
     },
     {
         fullName: "John Tarkpor",
         job: "Junior Front-end Developer",
-        profilPicture: "./src",
+        imageSrc: "images/image-john.jpg",
         comment: "If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident aboutstarting up as a professional developer."
     }    
 ]
 
-// slide continue
+// slide and buttons 
 
 let comment = 0;
 
@@ -39,13 +39,13 @@ let slideNext = () => {
     console.log(comments[comment]) 
 }
 
-
 let previousBtn = document.getElementById("btnPrevious");
 let nextBtn = document.getElementById("btnNext");
 
 previousBtn.addEventListener('click', slidePrev);
 nextBtn.addEventListener('click', slideNext);
 
+// class for cards
 class Comment {
     constructor(fullName, job, comment, image) {
         this.fullName = fullName,
@@ -55,26 +55,39 @@ class Comment {
     }
 }
 
-// class for cards 
-let innerComment = document.getElementsByClassName('comment');
-let authorJob = document.querySelector('#author-job');  
-let authorFullName = document.querySelector('.author-full-name');
+//change content 
+function changeComment() {
+    return innerComment = document.querySelector('.comment');    
+}
 
+function changeImage() {    
+    return imageSrc = document.querySelector('.right-content img') 
+}
 
-// document.addEventListener('onload', () => {    
-//     authorJob.innerHtml = "un métier";
-// })
+function changeName() {
+    return fullName = document.querySelector(".author-fullname")
+}
+
+function changeAuthorJob() {
+    return authorJob = document.querySelector('.author-job')
+}
 
 for(let item of comments) {
     let commentCard = new Comment(
         item.fullName,         
         item.job,          
-        item.comment         
+        item.comment,
+        item.imageSrc        
     )
 
-    // console.log(commentCard.fullName);    
-    newCard();
+    // console.log(commentCard);    
+    newCard(commentCard);  
+    changeComment().innerHTML = commentCard.comment;
+    changeImage().src = commentCard.image; 
+    changeAuthorJob().innerHTML = commentCard.job;  
+         
 }
+
 
 function newCard() {
     let carouselItem = document.createElement("div");
@@ -83,11 +96,12 @@ function newCard() {
 
     /* creeate the childrens inside new carousel-item-content, from origin .carousel-item-content */
     let carouselItemContent = document.querySelector(".carousel-item-content");
-
     
     let newChildrens = carouselItemContent.cloneNode(true);
-    carouselItem.append(newChildrens);    
+    carouselItem.append(newChildrens);
 }
+
+
 
 
 
