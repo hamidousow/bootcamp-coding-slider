@@ -3,16 +3,9 @@ let comments = [
         fullName: "Hamidou SOW",
         job: "Junior Fron-end Developer",
         imageSrc: "images/image-john.jpg",
-        comment: " Comment from Hamidou ",
+        comment: " I'm very happy because now i'm able to do back-end developement, this bootcamp helps me a lot and now I'm working as developer full stack",
         classList: "carousel-item"
-    },
-    {
-        fullName: "Tanya Sinclair",
-        job: "UX Engineer",
-        imageSrc: "images/image-tanya.jpg",
-        comment: " I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ",
-        classList: "carousel-item"
-    },
+    },    
     {
         fullName: "John Tarkpor",
         job: "Junior Front-end Developer",
@@ -58,10 +51,11 @@ for(let item of comments) {
     )
 
     // console.log(commentCard);    
-    newCard(commentCard);  
-    changeComment().innerHTML = commentCard.comment;
-    changeImage().src = commentCard.image; 
-    changeAuthorJob().innerHTML = commentCard.job;    
+    newCard(commentCard);
+    changeImage().src = commentCard.image;  
+    changeComment().innerHTML = commentCard.comment;    
+    changeName().innerHTML = commentCard.fullName;  
+    changeAuthorJob().innerHTML = commentCard.job;
 }
 
 
