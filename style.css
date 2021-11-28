@@ -52,8 +52,17 @@ main {
 }
 
 .left-content .richText .comment {
-  font-size: clamp(21px, 7vw, 25px);
+  font-size: clamp(16px, 5vw, 25px);
   color: #202046;
+}
+
+.left-content .richText .author-fullname {
+  margin-bottom: 8px;
+}
+
+.left-content .richText .author-job {
+  color: #babacf;
+  font-weight: 600;
 }
 
 .right-content {
@@ -63,8 +72,9 @@ main {
 .right-content img {
   display: block;
   width: 100%;
-  -webkit-box-shadow: 0px 20px 20px 0px #0000004f;
-          box-shadow: 0px 20px 20px 0px #0000004f;
+  max-width: 740px;
+  -webkit-box-shadow: 0px 20px 20px 0px #2020467a;
+          box-shadow: 0px 20px 20px 0px #2020467a;
 }
 
 .carousel {
@@ -127,15 +137,48 @@ main {
 }
 
 .container-buttons .carousel-control-prev {
-  border-radius: 20px 0 0 20px;
+  border-radius: 25px 0 0 25px;
+  position: relative;
+}
+
+.container-buttons .carousel-control-prev::after {
+  content: "<";
+  position: absolute;
+  color: #202046;
+  top: 50%;
+  font-size: 2em;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  left: 30%;
 }
 
 .container-buttons .carousel-control-next {
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 25px 25px 0;
+}
+
+.container-buttons .carousel-control-next::after {
+  content: ">";
+  position: absolute;
+  color: #202046;
+  top: 50%;
+  font-size: 2em;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  left: 70%;
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding: 2em;
+  }
+  .carousel {
+    padding: 1em;
+  }
+  .carousel .carousel-item {
+    width: 100%;
+  }
   .carousel .carousel-item-content {
+    height: 80vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -143,6 +186,43 @@ main {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    row-gap: 5em;
+  }
+  .left-content {
+    padding: 0;
+    -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+            justify-content: inherit;
+  }
+  .left-content .comment {
+    margin-bottom: 1.5em;
+  }
+  .left-content .author-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .left-content .author-content .author-fullname {
+    font-weight: 900;
+  }
+  .right-content {
+    position: relative;
+  }
+  .right-content img {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+  }
+  .container-buttons {
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
