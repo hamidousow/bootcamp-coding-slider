@@ -70,7 +70,7 @@ main {
 .carousel {
   max-width: 850px;
   padding: 3em 2em;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .carousel .carousel-inner {
@@ -100,8 +100,6 @@ main {
 
 .container-buttons {
   position: absolute;
-  bottom: 0;
-  left: 35px;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
   display: -webkit-inline-box;
@@ -109,6 +107,9 @@ main {
   display: inline-flex;
   height: 50px;
   width: 150px;
+  bottom: 50px;
+  z-index: 10;
+  left: 60%;
 }
 
 .container-buttons .button {
@@ -126,5 +127,17 @@ main {
 
 .container-buttons .carousel-control-next {
   border-radius: 0 20px 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel .carousel-item-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 /*# sourceMappingURL=style.css.map */

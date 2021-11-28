@@ -61,7 +61,7 @@ main {
 .carousel {
     max-width: 850px;
     padding: 3em 2em;
-    overflow: hidden;
+    overflow-x: hidden;
 
     .carousel-inner {
         display: inline-flex;
@@ -82,12 +82,13 @@ main {
 
 .container-buttons {
     position: absolute;
-    bottom: 0;
-    left: 35px;
     transform: translateY(50%);
     display: inline-flex;
     height: 50px;
     width: 150px;
+    bottom: 50px;
+    z-index: 10;
+    left: 60%;
 
     .button {
         height: 100%;
@@ -105,4 +106,13 @@ main {
     .carousel-control-next {
         border-radius: 0 20px 20px 0;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        .carousel-item-content {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }    
 }
