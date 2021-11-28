@@ -3,47 +3,24 @@ let comments = [
         fullName: "Hamidou SOW",
         job: "Junior Fron-end Developer",
         imageSrc: "images/image-john.jpg",
-        comment: " Comment from Hamidou "
+        comment: " Comment from Hamidou ",
+        classList: "carousel-item"
     },
     {
         fullName: "Tanya Sinclair",
         job: "UX Engineer",
         imageSrc: "images/image-tanya.jpg",
-        comment: " I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. "
+        comment: " I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ",
+        classList: "carousel-item"
     },
     {
         fullName: "John Tarkpor",
         job: "Junior Front-end Developer",
         imageSrc: "images/image-john.jpg",
-        comment: "If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident aboutstarting up as a professional developer."
+        comment: "If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident aboutstarting up as a professional developer.",
+        classList: "carousel-item"
     }    
 ]
-
-// slide and buttons 
-
-let comment = 0;
-
-let slidePrev = () => {
-    comment -= 1;
-    if(comment < 0) {
-        comment = comments.length - 1
-    }
-    console.log(comments[comment])
-}
-
-let slideNext = () => {
-    comment += 1;
-    if(comment > comments.length - 1) {
-        comment = 0
-    }
-    console.log(comments[comment]) 
-}
-
-let previousBtn = document.getElementById("btnPrevious");
-let nextBtn = document.getElementById("btnNext");
-
-previousBtn.addEventListener('click', slidePrev);
-nextBtn.addEventListener('click', slideNext);
 
 // class for cards
 class Comment {
@@ -84,8 +61,7 @@ for(let item of comments) {
     newCard(commentCard);  
     changeComment().innerHTML = commentCard.comment;
     changeImage().src = commentCard.image; 
-    changeAuthorJob().innerHTML = commentCard.job;  
-         
+    changeAuthorJob().innerHTML = commentCard.job;    
 }
 
 
@@ -98,8 +74,58 @@ function newCard() {
     let carouselItemContent = document.querySelector(".carousel-item-content");
     
     let newChildrens = carouselItemContent.cloneNode(true);
-    carouselItem.append(newChildrens);
+    carouselItem.append(newChildrens);    
 }
+
+// slide and buttons
+
+let count = 0;
+let carouselItems = document.querySelectorAll(".carousel-item");
+let nmbrItem = carouselItems.length
+console.log(nmbrItem);
+
+let slideNext = () => {
+    carouselItems[count].classList.remove("active");
+
+    if(count < nmbrItem - 1) {
+        count++
+    }
+    else {
+        count = 0;
+    }
+
+    carouselItems[count].classList.add("active"); 
+    // console.log(count)    
+}
+
+
+let slidePrev = () => {
+    carouselItems[count].classList.remove("active");
+
+    if(count > 0) {
+        count--
+    }
+    else {
+        count = nmbrItem - 1;
+    }
+
+    carouselItems[count].classList.add("active");
+    
+
+    // console.log(carouselItems[length].classList)    
+}
+
+let previousBtn = document.getElementById("btnPrevious");
+let nextBtn = document.getElementById("btnNext");
+
+previousBtn.addEventListener('click', slidePrev);
+nextBtn.addEventListener('click', slideNext);
+
+
+
+
+
+
 
 
 

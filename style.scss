@@ -71,6 +71,11 @@ main {
 
     .carousel-item {
         width: 800px;
+        display: none;
+    }
+
+    .carousel-item.active {
+        display: block;
     }
     
     .carousel-item-content {
