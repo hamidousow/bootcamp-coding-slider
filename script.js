@@ -115,11 +115,24 @@ let slidePrev = () => {
     // console.log(carouselItems[length].classList)    
 }
 
+function keyPress(e) {
+    console.log(e)
+    if(e.keyCode === 39) {
+        slideNext();
+    } else if(e.keyCode === 37) {
+        slidePrev()
+    }
+}
+
 let previousBtn = document.getElementById("btnPrevious");
 let nextBtn = document.getElementById("btnNext");
 
 previousBtn.addEventListener('click', slidePrev);
 nextBtn.addEventListener('click', slideNext);
+
+
+
+document.addEventListener('keydown', keyPress)
 
 
 
