@@ -1,7 +1,7 @@
 let comments = [
     {
         fullName: "Hamidou SOW",
-        job: "Junior Fron-end Developer",
+        job: "Junior FullStack  Developer ",
         imageSrc: "images/image-john.jpg",
         comment: " I'm very happy because now i'm able to do back-end developement, this bootcamp helps me a lot and now I'm working as developer full stack",
         classList: "carousel-item"
@@ -14,6 +14,13 @@ let comments = [
         classList: "carousel-item"
     }    
 ]
+// let comments = fetch("data/commentsData.json")
+//     .then( results => results.json())
+//     .then(console.log);
+    
+
+
+console.log(comments)
 
 // class for cards
 class Comment {
@@ -48,9 +55,7 @@ for(let item of comments) {
         item.job,          
         item.comment,
         item.imageSrc        
-    )
-
-    // console.log(commentCard);    
+    )  
     newCard(commentCard);
     changeImage().src = commentCard.image;  
     changeComment().innerHTML = commentCard.comment;    
@@ -88,8 +93,7 @@ let slideNext = () => {
         count = 0;
     }
 
-    carouselItems[count].classList.add("active"); 
-    // console.log(count)    
+    carouselItems[count].classList.add("active");
 }
 
 
@@ -104,9 +108,6 @@ let slidePrev = () => {
     }
 
     carouselItems[count].classList.add("active");
-    
-
-    // console.log(carouselItems[length].classList)    
 }
 
 function keyPress(e) {
@@ -123,8 +124,6 @@ let nextBtn = document.getElementById("btnNext");
 
 previousBtn.addEventListener('click', slidePrev);
 nextBtn.addEventListener('click', slideNext);
-
-
 
 document.addEventListener('keydown', keyPress)
 
