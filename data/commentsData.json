@@ -1,0 +1,16 @@
+[
+    {
+        "fullName": "Hamidou SOW",
+        "job": "Junior Fron-end Developer",
+        "imageSrc": "images/image-john.jpg",
+        "comment": " I'm very happy because now i'm able to do back-end developement, this bootcamp helps me a lot and now I'm working as developer full stack",
+        "classList": "carousel-item"
+    },    
+    {
+        "fullName": "John Tarkpor",
+        "job": "Junior Front-end Developer",
+        "imageSrc": "images/image-john.jpg",
+        "comment": "If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident aboutstarting up as a professional developer.",
+        "classList": "carousel-item"
+    }    
+]
