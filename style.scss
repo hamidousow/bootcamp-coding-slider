@@ -130,7 +130,7 @@ main {
     transform: translateY(50%);
     display: inline-flex;
     height: 50px;
-    width: 150px;
+    width: 115px;
     bottom: 6em;
     z-index: 10;
     left: 60%;
@@ -148,9 +148,8 @@ main {
         border-radius: 25px 0 0 25px;
         position: relative;
         &::after {
-            content: "<";
-            position: absolute;
-            color: $darkBlue;
+            content: url("images/icon-prev.svg");
+            position: absolute;            
             top: 50%;
             font-size: 2em;
             transform: translate(0, -50%);
@@ -161,9 +160,8 @@ main {
     .carousel-control-next {
         border-radius: 0 25px 25px 0;
         &::after {
-            content: ">";
-            position: absolute;
-            color: $darkBlue;
+            content: url("images/icon-next.svg");
+            position: absolute;            
             top: 50%;
             font-size: 2em;
             transform: translate(0, -50%);
@@ -176,7 +174,7 @@ main {
 
     main {
         padding: 0 1em 1em; 
-        align-items: inherit; 
+         
         background: url("images/pattern-curve.svg");
         background-repeat: no-repeat;
         background-position: bottom;
@@ -244,9 +242,18 @@ main {
 
     .container-buttons {
         width: 85px;
-        bottom: 50%;
-        left: 0;
+        top: 38%;
+        left: 50%;
         right: 0;
-        margin: auto;
+        transform: translate(-50%, 50%);
+        // margin: auto;
     }
+}
+
+@media screen and(max-width: 578px) {
+
+    main {
+        align-items: center;
+    }
+
 }
