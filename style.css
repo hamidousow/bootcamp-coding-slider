@@ -52,16 +52,15 @@ main::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: auto;
-  padding: 5em 2em;
+  height: 100%;
+  padding: 3em 2em;
   position: relative;
-}
-
-.left-content::after {
-  content: url("images/pattern-quotes.svg");
-  position: absolute;
-  top: 0;
-  left: 5em;
+  background: url("images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position-x: 8em;
+  background-position-y: 7em;
+  background-size: 100px 90px;
+  z-index: 3;
 }
 
 .left-content .richText {
@@ -69,10 +68,11 @@ main::before {
 }
 
 .left-content .richText .comment {
-  font-size: clamp(17px, 4vw, 25px);
+  font-size: clamp(17px, 4vw, 22px);
   color: #202046;
   margin-bottom: 1.5em;
   line-height: 130%;
+  width: 130%;
 }
 
 .left-content .richText .author-content {
@@ -239,6 +239,9 @@ main::before {
     -webkit-box-pack: inherit;
         -ms-flex-pack: inherit;
             justify-content: inherit;
+    background-size: 60px 50px;
+    background-position-x: 50%;
+    background-position-y: 1em;
   }
   .left-content::after {
     left: 50%;
@@ -247,6 +250,10 @@ main::before {
   }
   .left-content .comment {
     margin-bottom: 1.5em;
+    width: auto !important;
+  }
+  .left-content .author-fullname, .left-content .author-job {
+    font-size: 13px;
   }
   .left-content .author-content {
     display: -webkit-box;
@@ -260,6 +267,7 @@ main::before {
   }
   .left-content .author-content .author-fullname {
     font-weight: 900;
+    margin-bottom: 7px;
   }
   .right-content {
     padding: 2.1em;
@@ -267,7 +275,7 @@ main::before {
   .right-content img {
     display: block;
     width: 100%;
-    max-width: 350px;
+    max-width: 260px;
   }
   .container-buttons {
     position: absolute;

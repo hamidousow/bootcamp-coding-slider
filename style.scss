@@ -7,7 +7,7 @@ $clr-white: #ffffff;
 $boxShadow: 0px 20px 20px 0px #2020467a;
 
 $basicFontSize: 32px; 
-$big-text: clamp(17px, 4vw, 25px); 
+$big-text: clamp(17px, 4vw, 22px); 
 
 * {
     margin: 0;
@@ -46,16 +46,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    padding: 5em 2em;
+    height: 100%;
+    padding: 3em 2em;
     position: relative;
-
-    &::after {
-        content: url("images/pattern-quotes.svg");
-        position: absolute;
-        top: 0;
-        left: 5em;
-    }
+    background: url("images/pattern-quotes.svg");
+    background-repeat: no-repeat; 
+    background-position-x: 8em;
+    background-position-y: 7em;
+    background-size: 100px 90px;
+    z-index: 3;   
 
     .richText {
         width: 100%;
@@ -63,7 +62,8 @@ main {
             font-size: $big-text; 
             color: $darkBlue;
             margin-bottom: 1.5em; 
-            line-height: 130%;                    
+            line-height: 130%; 
+            width: 130%;                   
         }
 
         .author-content {
@@ -211,6 +211,9 @@ main {
     .left-content {
         padding: 2em 0;
         justify-content: inherit;
+        background-size: 60px 50px;
+        background-position-x: 50%;
+        background-position-y: 1em;
 
         &::after {            
             
@@ -220,6 +223,11 @@ main {
 
         .comment {
             margin-bottom: 1.5em;
+            width: auto!important;
+        }
+
+        .author-fullname, .author-job {
+            font-size: 13px;
         }
 
         .author-content {
@@ -229,6 +237,7 @@ main {
 
             .author-fullname {
                 font-weight: 900;
+                margin-bottom: 7px;
             }
         }
     }
@@ -239,7 +248,7 @@ main {
         img {        
             display: block;
             width: 100%;
-            max-width: 350px;            
+            max-width: 260px;            
         }    
     }  
 
@@ -267,5 +276,4 @@ main {
     main {
         align-items: center;
     }   
-
 }
