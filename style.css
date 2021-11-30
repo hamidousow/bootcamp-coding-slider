@@ -58,7 +58,7 @@ main::before {
   background: url("images/pattern-quotes.svg");
   background-repeat: no-repeat;
   background-position-x: 8em;
-  background-position-y: 4em;
+  background-position-y: 7em;
   background-size: 100px 90px;
   z-index: 3;
 }
@@ -275,7 +275,7 @@ main::before {
   .right-content img {
     display: block;
     width: 100%;
-    max-width: 350px;
+    max-width: 260px;
   }
   .container-buttons {
     position: absolute;
