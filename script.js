@@ -119,13 +119,13 @@ function keyPress(e) {
     }
 }
 
-let previousBtn = document.getElementById("btnPrevious");
-let nextBtn = document.getElementById("btnNext");
+// let previousBtn = document.getElementsByClassName(".btnPrevious");
+// let nextBtn = document.getElementById("btnNext");
 
-previousBtn.addEventListener('click', slidePrev);
-nextBtn.addEventListener('click', slideNext);
+// previousBtn.addEventListener('click', slidePrev);
+// nextBtn.addEventListener('click', slideNext);
 
-document.addEventListener('keydown', keyPress)
+document.addEventListener('keydown', keyPress);
 
 
 
