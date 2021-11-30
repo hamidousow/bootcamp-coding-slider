@@ -18,10 +18,6 @@ let comments = [
 //     .then( results => results.json())
 //     .then(console.log);
     
-
-
-console.log(comments)
-
 // class for cards
 class Comment {
     constructor(fullName, job, comment, image) {
@@ -33,7 +29,7 @@ class Comment {
 }
 
 //change content 
-function changeComment() {
+function changeComment() {    
     return innerComment = document.querySelector('.comment');    
 }
 
@@ -49,6 +45,8 @@ function changeAuthorJob() {
     return authorJob = document.querySelector('.author-job')
 }
 
+let doubleQuotes = " \" ";
+
 for(let item of comments) {
     let commentCard = new Comment(
         item.fullName,         
@@ -58,7 +56,7 @@ for(let item of comments) {
     )  
     newCard(commentCard);
     changeImage().src = commentCard.image;  
-    changeComment().innerHTML = commentCard.comment;    
+    changeComment().innerHTML = doubleQuotes + commentCard.comment + doubleQuotes;    
     changeName().innerHTML = commentCard.fullName;  
     changeAuthorJob().innerHTML = commentCard.job;
 }
@@ -80,8 +78,7 @@ function newCard() {
 
 let count = 0;
 let carouselItems = document.querySelectorAll(".carousel-item");
-let nmbrItem = carouselItems.length
-console.log(nmbrItem);
+let nmbrItem = carouselItems.length;
 
 let slideNext = () => {
     carouselItems[count].classList.remove("active");
@@ -111,19 +108,13 @@ let slidePrev = () => {
 }
 
 function keyPress(e) {
-    console.log(e)
+    
     if(e.keyCode === 39) {
         slideNext();
     } else if(e.keyCode === 37) {
         slidePrev()
     }
 }
-
-// let previousBtn = document.getElementsByClassName(".btnPrevious");
-// let nextBtn = document.getElementById("btnNext");
-
-// previousBtn.addEventListener('click', slidePrev);
-// nextBtn.addEventListener('click', slideNext);
 
 document.addEventListener('keydown', keyPress);
 
