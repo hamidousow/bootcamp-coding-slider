@@ -2,7 +2,7 @@ let comments = [
     {
         fullName: "Hamidou SOW",
         job: "Junior FullStack  Developer ",
-        imageSrc: "images/image-john.jpg",
+        imageSrc: "images/image-hamidou.jpg",
         comment: " I'm very happy because now i'm able to do back-end developement, this bootcamp helps me a lot and now I'm working as developer full stack",
         classList: "carousel-item"
     },    
