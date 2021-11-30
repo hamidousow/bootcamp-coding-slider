@@ -11,7 +11,7 @@
 <body>
     <main>
         <div class="wrap-content">
-            <div class="container-buttons">
+            <!-- <div class="container-buttons">
                 <button class="carousel-control-prev button" id="btnPrevious" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span></span>
@@ -20,7 +20,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span></span>
                 </button>
-            </div>
+            </div> -->
             <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -35,7 +35,18 @@
                                 </div>
                             </div>
                             <div class="right-content" id="right-content">
-                                <img src="images/image-tanya.jpg" class="profil-picture" alt="...">                                                            
+                                <img src="images/image-tanya.jpg" class="profil-picture" alt="...">
+                                <div class="container-buttons">
+                                    <button class="carousel-control-prev button" id="btnPrevious" type="button" data-bs-target="#carouselFade" data-bs-slide="prev"
+                                    onclick="slidePrev()">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span></span>
+                                    </button>
+                                    <button class="carousel-control-next button" id="btnNext" type="button" data-bs-target="#carouselFade" data-bs-slide="next" onclick="slideNext()">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span></span>
+                                    </button>
+                                </div>                                                            
                             </div>
                         </div>
                     </div>
