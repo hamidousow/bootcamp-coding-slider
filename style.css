@@ -68,7 +68,7 @@ main::before {
 }
 
 .left-content .richText .comment {
-  font-size: clamp(17px, 4vw, 22px);
+  font-size: clamp(17px, 5vw, 26px);
   color: #202046;
   margin-bottom: 1.5em;
   line-height: 130%;
@@ -102,13 +102,15 @@ main::before {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 3em;
+  padding: 3.3em;
 }
 
 .right-content img {
   display: block;
-  width: 100%;
+  width: 95%;
+  min-width: 305px;
   max-width: 740px;
+  margin: auto;
   -webkit-box-shadow: 0px 20px 20px 0px #2020467a;
           box-shadow: 0px 20px 20px 0px #2020467a;
 }
@@ -142,8 +144,8 @@ main::before {
 .carousel .carousel-item-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 55% 45%;
-      grid-template-columns: 55% 45%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -157,8 +159,8 @@ main::before {
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 50px;
-  width: 115px;
-  bottom: 3em;
+  width: 105px;
+  bottom: 3.3em;
   z-index: 10;
   left: 5em;
   background: #ffffff;
@@ -274,7 +276,8 @@ main::before {
   }
   .right-content img {
     display: block;
-    width: 100%;
+    width: 95%;
+    min-width: 240px;
     max-width: 260px;
   }
   .container-buttons {

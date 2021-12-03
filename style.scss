@@ -7,7 +7,7 @@ $clr-white: #ffffff;
 $boxShadow: 0px 20px 20px 0px #2020467a;
 
 $basicFontSize: 32px; 
-$big-text: clamp(17px, 4vw, 22px); 
+$big-text: clamp(17px, 5vw, 26px); 
 
 * {
     margin: 0;
@@ -89,12 +89,14 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 3em;
+    padding: 3.3em;
 
     img {        
         display: block;
-        width: 100%;
+        width: 95%;
+        min-width: 305px;
         max-width: 740px;
+        margin: auto;
         box-shadow: $boxShadow;
     }    
 }
@@ -121,7 +123,7 @@ main {
     
     .carousel-item-content {
         display: grid;
-        grid-template-columns: 55% 45%;
+        grid-template-columns: 50% 50%;
         align-items: center;          
     }
 }
@@ -131,8 +133,8 @@ main {
     transform: translateY(50%);
     display: inline-flex;
     height: 50px;
-    width: 115px;
-    bottom: 3em;
+    width: 105px;
+    bottom: 3.3em;
     z-index: 10;
     left: 5em;
     background: $clr-white;
@@ -247,7 +249,8 @@ main {
     
         img {        
             display: block;
-            width: 100%;
+            width: 95%;
+            min-width: 240px;
             max-width: 260px;            
         }    
     }  
