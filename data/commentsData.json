@@ -1,12 +1,5 @@
-[
-    {
-        "fullName": "Hamidou SOW",
-        "job": "Junior Fron-end Developer",
-        "imageSrc": "images/image-john.jpg",
-        "comment": " I'm very happy because now i'm able to do back-end developement, this bootcamp helps me a lot and now I'm working as developer full stack",
-        "classList": "carousel-item"
-    },    
-    {
+[ 
+   {
         "fullName": "John Tarkpor",
         "job": "Junior Front-end Developer",
         "imageSrc": "images/image-john.jpg",
